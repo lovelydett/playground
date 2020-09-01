@@ -1,0 +1,4 @@
+三种方式查看C++对应的汇编代码：
+1. g++ -S
+2. 先生成 .out 再 objdump
+3. godbolt.org

@@ -1,0 +1,90 @@
+
+a.out:	file format Mach-O 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+__text:
+; int myfunc(int param){
+100000f30:	55 	pushq	%rbp
+100000f31:	48 89 e5 	movq	%rsp, %rbp
+100000f34:	48 83 ec 10 	subq	$16, %rsp
+100000f38:	89 7d fc 	movl	%edi, -4(%rbp)
+; printf("%d",param);
+100000f3b:	8b 75 fc 	movl	-4(%rbp), %esi
+100000f3e:	48 8d 3d 69 00 00 00 	leaq	105(%rip), %rdi
+100000f45:	b0 00 	movb	$0, %al
+100000f47:	e8 40 00 00 00 	callq	64 <dyld_stub_binder+0x100000f8c>
+100000f4c:	31 f6 	xorl	%esi, %esi
+; return 0;
+100000f4e:	89 45 f8 	movl	%eax, -8(%rbp)
+100000f51:	89 f0 	movl	%esi, %eax
+100000f53:	48 83 c4 10 	addq	$16, %rsp
+100000f57:	5d 	popq	%rbp
+100000f58:	c3 	retq
+100000f59:	0f 1f 80 00 00 00 00 	nopl	(%rax)
+; int main(){
+100000f60:	55 	pushq	%rbp
+100000f61:	48 89 e5 	movq	%rsp, %rbp
+100000f64:	48 83 ec 10 	subq	$16, %rsp
+100000f68:	c7 45 fc 00 00 00 00 	movl	$0, -4(%rbp)
+; int n = 10;
+100000f6f:	c7 45 f8 0a 00 00 00 	movl	$10, -8(%rbp)
+; myfunc(n);
+100000f76:	8b 7d f8 	movl	-8(%rbp), %edi
+100000f79:	e8 b2 ff ff ff 	callq	-78 <__Z6myfunci>
+100000f7e:	31 ff 	xorl	%edi, %edi
+; return 0;
+100000f80:	89 45 f4 	movl	%eax, -12(%rbp)
+100000f83:	89 f8 	movl	%edi, %eax
+100000f85:	48 83 c4 10 	addq	$16, %rsp
+100000f89:	5d 	popq	%rbp
+100000f8a:	c3 	retq
+
+__Z6myfunci:
+; int myfunc(int param){
+100000f30:	55 	pushq	%rbp
+100000f31:	48 89 e5 	movq	%rsp, %rbp
+100000f34:	48 83 ec 10 	subq	$16, %rsp
+100000f38:	89 7d fc 	movl	%edi, -4(%rbp)
+; printf("%d",param);
+100000f3b:	8b 75 fc 	movl	-4(%rbp), %esi
+100000f3e:	48 8d 3d 69 00 00 00 	leaq	105(%rip), %rdi
+100000f45:	b0 00 	movb	$0, %al
+100000f47:	e8 40 00 00 00 	callq	64 <dyld_stub_binder+0x100000f8c>
+100000f4c:	31 f6 	xorl	%esi, %esi
+; return 0;
+100000f4e:	89 45 f8 	movl	%eax, -8(%rbp)
+100000f51:	89 f0 	movl	%esi, %eax
+100000f53:	48 83 c4 10 	addq	$16, %rsp
+100000f57:	5d 	popq	%rbp
+100000f58:	c3 	retq
+100000f59:	0f 1f 80 00 00 00 00 	nopl	(%rax)
+
+_main:
+; int main(){
+100000f60:	55 	pushq	%rbp
+100000f61:	48 89 e5 	movq	%rsp, %rbp
+100000f64:	48 83 ec 10 	subq	$16, %rsp
+100000f68:	c7 45 fc 00 00 00 00 	movl	$0, -4(%rbp)
+; int n = 10;
+100000f6f:	c7 45 f8 0a 00 00 00 	movl	$10, -8(%rbp)
+; myfunc(n);
+100000f76:	8b 7d f8 	movl	-8(%rbp), %edi
+100000f79:	e8 b2 ff ff ff 	callq	-78 <__Z6myfunci>
+100000f7e:	31 ff 	xorl	%edi, %edi
+; return 0;
+100000f80:	89 45 f4 	movl	%eax, -12(%rbp)
+100000f83:	89 f8 	movl	%edi, %eax
+100000f85:	48 83 c4 10 	addq	$16, %rsp
+100000f89:	5d 	popq	%rbp
+100000f8a:	c3 	retq
+Disassembly of section __TEXT,__stubs:
+__stubs:
+100000f8c:	ff 25 7e 00 00 00 	jmpq	*126(%rip)
+Disassembly of section __TEXT,__stub_helper:
+__stub_helper:
+100000f94:	4c 8d 1d 6d 00 00 00 	leaq	109(%rip), %r11
+100000f9b:	41 53 	pushq	%r11
+100000f9d:	ff 25 5d 00 00 00 	jmpq	*93(%rip)
+100000fa3:	90 	nop
+100000fa4:	68 00 00 00 00 	pushq	$0
+100000fa9:	e9 e6 ff ff ff 	jmp	-26 </Users/edz/Desktop/code/playground/code/OS/callStack.o+0xa0b3517a>
