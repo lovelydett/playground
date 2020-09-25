@@ -1,5 +1,6 @@
 //@tt 2020-09-14
 
+//1.数组
 let a = [1,2,3,4]
 console.log(a)
 a.push(5)
@@ -16,4 +17,7 @@ console.log(typeof(a.push))
 console.log(a.length)
 console.log(a["length"])
 //identical, too神奇
+
+
+//2.类和对象
 
