@@ -1,0 +1,16 @@
+namespace shop;
+
+enum Type:ubyte { Food, Toy, Daily }
+
+struct Price {
+    origin : float;
+    discount : float;
+}
+
+table Item {
+    name : string;
+    price : Price;
+    type : Type = Food;
+}
+
+root_type Item;
