@@ -10,7 +10,8 @@ struct Price {
 table Item {
     name : string;
     price : Price;
-    type : Type = Food;
+    type : Type = Food; //remove one field by mark it as "deprecated", not affect the original write codes
+    from : string; //add one more field to the back end, not intruding the original read codes
 }
 
 root_type Item;

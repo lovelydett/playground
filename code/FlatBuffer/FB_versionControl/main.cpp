@@ -21,6 +21,7 @@ int main(){
     ItemBuilder builder2(builder);
     builder2.add_name(name);
     builder2.add_price(&price);
+    builder2.add_type(Type(0));
     builder.Finish(builder2.Finish());
 
 
