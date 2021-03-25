@@ -1,0 +1,1 @@
+to compile, first to have gflags installed, then compile with static lib: g++ demo.cpp /usr/local/lib/libgflags.a -lpthread
