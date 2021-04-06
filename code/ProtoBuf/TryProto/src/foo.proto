@@ -1,0 +1,18 @@
+syntax = "proto3"
+
+message SearchRequest {
+    string query = 1;
+    int32 page_number = 2;  // Which page number do we want?
+    int32 result_per_page = 3; // Number of results to return per page.
+    enum Corpus {
+        UNIVERSAL = 0; // The first numerical value must be 0
+        WEB = 1;
+        IMAGES = 2;
+        LOCAL = 3;
+        NEWS = 4;
+        PRODUCTS = 5;
+        VIDEO = 6;
+    }
+    Corpus corpus = 4;
+}
+
