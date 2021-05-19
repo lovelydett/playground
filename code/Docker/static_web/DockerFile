@@ -1,4 +1,0 @@
-# Version: 0.0.1
-FROM ubuntu:18.04
-LABEL maintainer="xyt@bupt.cn"
-RUN sudo spt-get update; sudo apt-get install -y nginx
