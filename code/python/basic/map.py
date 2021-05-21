@@ -21,3 +21,12 @@ if __name__ == "__main__":
   for each in it3:
     pass
   
+  a = [[1, 2, 3], [5, 6, 7], [9, 10, 11], [13, 14, 15]]
+  k = 10
+  iter = map(lambda p : sum(p[0]) + p[1], zip(a, [k] * len(a)))
+  print(iter)
+  print(list(iter))
+  
+  for v1, v2, v3 in a:
+    print(v1, v2, v2) 
+  
